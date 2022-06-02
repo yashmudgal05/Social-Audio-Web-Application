@@ -1,7 +1,7 @@
 <pre>
-# Social Audio Web App
+<b>Social Audio Web App</b>
 
-##About the Project:-
+<b>About the Project:-</b>
 
 This project is submitted in the fulfillment of Internship by TechCiti Software Consulting Pvt. Limited
 
@@ -18,7 +18,7 @@ App has these functionalities:-
 9.	There is also admin dashboard in which admin can look into the stats like how many new people are registered and how many new voice chat rooms open. This is helpful in data analysis.
 
 
-## Technologies Used:-
+<b>Technologies Used:-</b>
 
 1. React Js
 2. Node.js
@@ -34,9 +34,9 @@ App has these functionalities:-
 12. Chrome Developer Tools.(For testing)
 13. Twilio.
 
-### I follow MVC pattern for this project.
+I follow MVC pattern for this project.
 
-####Important Links:-
+<b>Important Links:-</b>
 1. Figma Design:- https://www.figma.com/file/NITExN3S4dfvjNCkPQynDw/Real-Time-Voice-Chat-App?node-id=0%3A1
 
 </pre>
