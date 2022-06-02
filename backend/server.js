@@ -7,7 +7,7 @@ const router = require('./routes');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 
-const ACTIONS = require('./actions');8
+const ACTIONS = require('./actions');
 
 const io = require('socket.io')(server, {
   cors: {
@@ -108,6 +108,20 @@ io.on('connection', (socket) => {
             });
         });
     });
+
+    socket.on(ACTIONS.MUTE_INFO, ({ userId, roomId, isMute }) => {
+        const clients = Array.from(io.sockets.adapter.rooms.get(roomId) || []);
+        clients.forEach((clientId) => {
+            if (clientId !== socket.id) {
+                console.log('mute info');
+                io.to(clientId).emit(ACTIONS.MUTE_INFO, {
+                    userId,
+                    isMute,
+                });
+            }
+        });
+    });
+
 
     const leaveRoom = () => {
         const { rooms } = socket;
